@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>form demo session</title>
+
+    <style>
+        body {
+            background-color: #786f78;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        fieldset {
+            background-color: #aaa9ad;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: italic;
+        }
+        #b1 {
+           background-color: lightblue;
+        }
+        #b1:hover{
+            cursor: pointer;
+            background-color: #515c6d;
+            color: white;
+        }
+        
+       nav {
+           background-color: black;
+           text-align: center;
+           color: white;
+           padding: 10px;
+           display: block;
+}
+
+
+        header{
+            background-color: #333;
+            padding: 10px;
+           display: block;
+        }
+    </style>
+
+</head>
+<body> 
+
+    <header> 
+        <h1 > welcome to my portfolio</h1>
+    </header>
+
+        <nav>
+            <buttontype="button" onclick="location.href='index.html'">home</buttontype>
+            <buttontype="button">preferences</button>
+            <a href="#">additional info</a>
+        </nav>
+
+        <form action="#" method="get"> 
+            <fieldset style="width: 50%; margin: auto; border: 2px solid black; padding: 20px;">
+                <legend> Personal information</legend>
+                
+                <label> Full Name:</label>
+                <input type="text" id="fname" placeholder="Enter Your Full Name" required/><br><br>
+
+                <label> Email:</label>
+                <input type="text" id="email" placeholder="Enter Your email@gmail.com" /><br><br>
+
+                <label> Password:</label>
+                <input type="password" id="password" placeholder="Enter Your password" required/><br><br>
+
+                 <label> Date Of Birth:</label>
+                <input type="date" id="date" placeholder="Enter Your dd-mm-yyyy" required/><br><br>
+                
+                 <label> Website URL:</label>
+                <input type="url" id="wurl" placeholder="Enter your website url" /><br><br>
+
+            </fieldset>
+
+             <fieldset style="width: 50%; margin: auto; border: 2px solid black; padding: 20px;">
+                <legend> Preferences</legend>
+                
+                <label> Gender:</label><br>
+                <input type="radio" id="gender" name="gender"required/>
+                <label>male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label>female</label>
+                <br><br>            
+
+                <label>Languages:</label> <br>
+                <kabel>Telugu</kabel>
+                <input type="checkbox" id="languages" name="language"><br>
+                <kabel>Hindi</kabel>
+                <input type="checkbox" id="languages" name="language"><br>
+                <kabel>English</kabel>
+                <input type="checkbox" id="languages" name="language"><br>
+                <kabel>other</kabel>
+                <input type="checkbox" id="languages" name="language"><br>
+
+               <label> select country</label>
+                <select id="country" name="country">
+                    <option value="select">select country</option>
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="australia">Australia</option>
+                    </select>
+
+                <br><br>
+
+                <label> about myself :</label><br>
+                <textarea id="about myself" name="about myself" rows="5" cols="50" placeholder="Tell us about yourself"></textarea><br><br>
+
+            </fieldset>
+
+            <fieldset style="width: 50%; margin: auto; border: 2px solid black; padding: 20px;"> 
+                <legend>Additional information</legend>
+                <label> upload file:</label>
+                <input type="file" id="file" name="file"  action="upload" accept=".jpg, .jpeg, .png, .pdf" required/><br><br>          
+            </fieldset>
+
+           <div class="buttons" style="text-align: center; margin-top: 20px;">
+                <input type="submit" id ="b1" value="Submit" style="margin-right: 20px;"/>
+                <input type="reset"  id = "b1" value="Reset"/>
+                <input type = "button" id="b1" value="onclick" onclick="alert('button clicked')">
+           </div>
+
+        </form>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.2",
+    "express-validator": "^7.2.1"
+  },
+  "name": "fedf-html",
+  "version": "1.0.0",
+  "description": "\"# fedf-html-css-javascript\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsmithaMunaga/fedf-html-css-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsmithaMunaga/fedf-html-css-javascript/issues"
+  },
+  "homepage": "https://github.com/AsmithaMunaga/fedf-html-css-javascript#readme"
+}

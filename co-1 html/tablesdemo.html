@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>creating tabe demo session</title>
+    
+    <style>
+       
+      body {
+            text-align: center; 
+        }
+       h1 {
+        color: red;
+       }
+         table th {
+            background-color: rgb(121, 216, 237);
+        }
+
+         table tr{
+          background-color: rgb(73, 184, 227);
+        }
+
+        tfoot td{
+            background-color: rgba(9, 163, 245, 0.675);
+        }
+
+        tbody{
+            text-align: center;
+        }
+        caption{
+            color:rgb(3, 13, 3)
+        }
+    </style>
+
+</head>
+<body>
+    <h1> student report</h1>
+
+    <table border="1" align="center">
+       <thead> 
+            <caption> student marks report</caption>
+                 
+            <tr>
+                <th rowspan="2">SID</th>
+                <th rowspan="2">SNAME</th>
+                <th colspan="3">Marks</th>
+                <th rowspan="2"> Total</th>
+                <th rowspan="2"> Grade</th>
+            </tr>
+
+            <tr>
+                <th> java</th>
+                <th> full stack</th>
+                <th> python</th>
+            </tr>
+       </thead>
+
+       <tbody>
+           <tr> 
+            <td>1</td>
+            <td>asmitha</td>
+            <td>100</td>
+            <td>70</td>
+            <td>80</td>
+            <td>250</td>
+            <td>A</td>
+           </tr>
+
+           <tr> 
+            <td>2</td>
+            <td>Sai</td>
+            <td>90</td>
+            <td>60</td>
+            <td>100</td>
+            <td>250</10td>
+            <td>A</td>
+           </tr>
+
+           <tr> 
+            <td>3</td>
+            <td>lakshmi</td>
+            <td>90</td>
+            <td>80</td>
+            <td>80</td>
+            <td>250</td>
+            <td>B</td>
+           </tr>
+
+       </tbody>
+
+      <tfoot> 
+             <tr>
+                <td colspan="5">Average</td>
+                <td> 250</td>
+                <td> - </td>
+             </tr>  
+      </tfoot>
+
+    </table>
+
+</body>
+</html>

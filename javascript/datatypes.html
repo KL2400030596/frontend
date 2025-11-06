@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Data types demo session in java script</title>
+</head>
+<body>
+     <h1>data type session</h1>
+     <pre id="demo"> </pre>
+     <script>
+            const a1=1;
+            const a2="ramu";
+            const a3=true;
+            let a4;
+            const a5=null;
+            const a6=8985980288n;
+            const a7=Symbol("id");
+          
+          <!-- one procedure to  print value-->
+          
+         let result="";
+                    result += a1 + "\n";
+                    result += a2 + "\n";
+                    result += a3 + "\n";
+                    result += a4 + "\n";
+                    result += a5 + "\n";
+                    result += a6 + "\n";
+                    result += a7.toString() + "\n";
+
+            document.getElementById("demo").innerText=result;
+            
+                    let r = `
+                            Number: ${a1}
+                            String: ${a2}
+                            Boolean: ${a3}
+                            Undefined: ${a4}
+                            Null: ${a5}
+                            BigInt: ${a6}
+                            Symbol: ${a7.toString()}
+                            `;
+
+             document.getElementById("demo").innerText=r;        
+
+        
+
+     </script>
+</body>
+</html>

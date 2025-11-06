@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions demo session</title>
+
+</head>
+<body>
+    <h1> functions</h1>
+    <p id="demo"></p>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function divide(a, b) {
+            if (b === 0) {
+                return "Cannot divide by zero";
+            }
+            return a / b;
+        }
+
+        function modulo(a,b){
+            if(a<b)
+            return a;
+         else 
+            return a%b;
+        }
+        let num1 = parseInt(prompt("Enter first number:"));
+        let num2 = parseInt(prompt("Enter second number:"));
+
+        document.getElementById("demo").innerHTML = "Addition: " + add(num1, num2) + "<br/>";
+        document.getElementById("demo").innerHTML += "Subtraction: " + subtract(num1, num2) + "<br/>";
+        document.getElementById("demo").innerHTML += "Multiplication: " + multiply(num1, num2) + "<br/>";
+        document.getElementById("demo").innerHTML += "Division: " + divide(num1, num2)+ "<br/>";
+        document.getElementById("demo").innerHTML += "Modulus: " + modulo(num1, num2);
+    </script>
+</body>
+</html>

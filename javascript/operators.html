@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operators session demoo in java script</title>
+</head>
+<body>
+    <h1>Operators session</h1>
+    <pre id="demo"> </pre>
+    <script>
+        const a = 10;
+        const b = 20;
+
+        let result = "";
+
+        // Arithmetic Operators
+        result += ` 
+                   Addition: ${a + b};
+                   Subtraction: ${a - b};
+                   Multiplication: ${a * b};
+                   Division: ${a / b};
+                   Modulus: ${a % b}
+                   `;
+
+        // Assignment Operators
+        let c = a;
+        c += b; // c = c + b
+        result += `
+                   After Assignment (c += b): ${c}
+                   After Assignment (c -= a): ${c - a}
+                   `;
+
+        // relational Operators
+        result += `
+                   Equal to: ${a == b};
+                   Not equal to: ${a != b};
+                   Greater than: ${a > b};
+                   Less than: ${a < b}
+                   Greater than or equal to: ${a >= b};
+                   Less than or equal to: ${a <= b}
+                    `;
+
+        // Logical Operators
+        const x = true;
+        const y = false;
+        result += `
+                   Logical AND: ${x <y && x==y};
+                   Logical OR: ${x>y || x<=y};
+                   Logical NOT: ${x!=y}
+                   Logical XOR: ${x ^ y}
+                    `;
+
+        // Bitwise Operators
+        result += `
+                   Bitwise AND: ${a & b};
+                   Bitwise OR: ${a | b};
+                   Bitwise XOR: ${a ^ b};
+                   Bitwise NOT: ${~a};
+                   Left Shift: ${a << 1};
+                   Right Shift: ${a >> 1}
+                   `;
+
+        //ternary operator
+        result +=`
+                   Ternary Operator: ${a > b ? "a is greater" : "b is greater"}
+                   `;
+          //switch cas
+           
+            result += `
+                   Day of the week: 
+                   `;
+            switch (day) {
+                case 1:
+                    result += "Monday";
+                    break;
+                case 2:
+                    result += "Tuesday";
+                    break;
+                case 3:
+                    result += "Wednesday";
+                    break;
+                case 4:
+                    result += "Thursday";
+                    break;
+                case 5:
+                    result += "Friday";
+                    break;
+                case 6:
+                    result += "Saturday";
+                    break;
+                case 7:
+                    result += "Sunday";
+                    break;
+                default:
+                    result += "Invalid day";
+            }
+            document.getElementById("demo").innerText = result;
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Switch Statement Demo</title>
+</head>
+<body>
+    <h1>Switch Statement Demo</h1>
+    <p id="demo"></p>
+    <script>
+        let day = parseInt(prompt("Enter Day Number:"));
+        switch(day)
+        {
+            case 0:document.getElementById("demo").innerHTML="Sunday"+"<br/>"; 
+            case 1:document.getElementById("demo").innerHTML+="Monday"+"<br/>"; 
+            case 2:document.getElementById("demo").innerHTML+="Tuesday"+"<br/>"; 
+            case 3:document.getElementById("demo").innerHTML+="Wednesday"+"<br/>"; 
+            case 4:document.getElementById("demo").innerHTML+="Thursday"+"<br/>";
+            case 5:document.getElementById("demo").innerHTML+="Friday"+"<br/>"; 
+            case 6:document.getElementById("demo").innerHTML+="Saturday"+"<br/>";
+            default:document.getElementById("demo").innerHTML+="Invalid Day"+"<br/>";
+
+        }
+
+    </script>
+</body>
+</html>
+
+
+<!-- by using += it will print all the outputs from that number without using break statement-->
+<!-- if we use default used at starting  of the switch block we need to use the break statement-->
+<!--if default is not the last case (you place it somewhere in between) → you must use break, otherwise execution will "fall through" to the next case.-->

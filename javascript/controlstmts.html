@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Control statements demo session in java script</title>
+</head>
+<body>
+    <h1> Control statements demonistration in java script</h1>
+    <pre id="demo"> </p>
+       <script>
+        let x;
+        let y;
+        let n1=parseInt(prompt("Enter x value"));
+        let n2=parseInt(prompt("Enter y value"));
+
+        document.getElementById("demo").innerHTML = "first element "+n1+"<br/>";
+        document.getElementById("demo").innerHTML += "second element "+n2;
+        
+        //if-else statement
+        if(n1<n2){
+             document.getElementById("demo").innerHTML += "\n"+"second element "+n2;
+             }
+        else if(n1>n2){
+                    document.getElementById("demo").innerHTML += "\n"+"first element "+n1;
+             }
+        else{
+            document.getElementById("demo").innerHTML += "\n"+"both are equal";
+            }
+         
+        //switch statement
+          let z;
+          let n3=parseInt(prompt("Enter a number between 1 to 5"));
+          switch(n3){
+            case 1:
+                z="one";
+                break;
+            case 2:
+                z="two";
+                break;
+            case 3:
+                z="three";
+                break;
+            case 4:
+                z="four";
+                break;
+            case 5:
+                z="five";
+                break;
+            default:
+                z="not in range";
+          }
+          document.getElementById("demo").innerHTML += "\n"+"You entered "+z;
+
+        //for loop
+           let even=0;
+           let odd=0;
+              for(let i=1;i<=10;i++){     
+                if(i%2==0){
+                     even++;
+                }
+                else{
+                     odd++;
+                }
+              }
+
+              document.getElementById("demo").innerHTML += "\n"+"Total even numbers are "+even;
+              document.getElementById("demo").innerHTML += "\n"+"Total odd numbers are "+odd;
+
+        //while loop
+            let prime=0;
+            let range=parseInt(prompt("Enter a range to find prime numbers"));
+            let i=2;
+            while(i<range){
+                let isPrime=true;
+                for(let j=2;j<i;j++){
+                    if(i%j==0){
+                        isPrime=false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    prime++;
+                }
+                i++;
+            } 
+            document.getElementById("demo").innerHTML += "\n"+"Total prime numbers in range "+range+" are "+prime;
+
+        //do-while loop
+            let factorial=1;
+            let num=parseInt(prompt("Enter a number to find factorial"));
+            let k=1;
+            do{
+                factorial *= k;
+                k++;
+            }while(k<=num);
+            document.getElementById("demo").innerHTML += "\n"+"Factorial of "+num+" is "+factorial;
+
+        //break statement
+            let sum=0;
+            let limit=parseInt(prompt("Enter a limit to find sum of numbers"));
+            for(let i=1;i<=limit;i++){
+                if(i==10){
+                    break; // exits the loop when i is 10
+                }
+                sum += i;
+            }
+            document.getElementById("demo").innerHTML += "\n"+"Sum of numbers up to "+limit+" (excluding 10) is "+sum;
+
+        //continue statement
+            let skipSum=0;
+            let skipLimit=parseInt(prompt("Enter a limit to find sum of numbers (skipping 5)"));
+            for(let i=1;i<=skipLimit;i++){
+                if(i==5){
+                    continue; // skips the iteration when i is 5
+                }
+                skipSum += i;
+            }
+            document.getElementById("demo").innerHTML += "\n"+"Sum of numbers up to "+skipLimit+" (excluding 5) is "+skipSum;
+
+
+       </script>
+        
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>arrays</h1>
+    <p id="demo"></p>
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry", "Date"];
+        let numbers = [10, 20, 30, 40];
+
+        // Using a variable for the element to shorten code
+        let demoElem = document.getElementById("demo");
+
+        demoElem.innerHTML += "Initial fruits: " + fruits + "<br/>";
+        demoElem.innerHTML += "Initial numbers: " + numbers + "<br/>";
+
+        // Adding elements
+        fruits.push("Elderberry");
+        numbers.push(50);
+        demoElem.innerHTML += "After push (add): fruits = " + fruits + "<br/>";
+        demoElem.innerHTML += "After push (add): numbers = " + numbers + "<br/>";
+
+        // Adding or replacing elements by index
+        fruits[4] = "Fig";  // overwrite Elderberry
+        fruits = "Coconut";  // replace the array variable with a string
+        demoElem.innerHTML += "After replacing in fruits: " + fruits + "<br/>";
+
+        // Replacing Date with Grapes
+        fruits = "Grapes";
+        demoElem.innerHTML += "After replacing in fruits: " + fruits + "<br/>";
+
+        // Remove last elements
+        // Here fruits is a string, so pop will cause an error, but let's keep as is
+        // To prevent error, check type of fruits before pop:
+        if (Array.isArray(fruits)) {
+            fruits.pop();
+        }
+        numbers.pop();
+        demoElem.innerHTML += "After pop (remove last element): fruits = " + fruits + "<br/>";
+        demoElem.innerHTML += "After pop (remove last element): numbers = " + numbers + "<br/>";
+
+        // Access first elements
+        let firstFruit = fruits[0];
+        let firstNumber = numbers;
+        demoElem.innerHTML += "First fruit: " + firstFruit + "<br/>";
+        demoElem.innerHTML += "First number: " + firstNumber + "<br/>";
+
+        // Loop through fruits with basic for loop
+        demoElem.innerHTML += "Fruits using basic for loop:<br/>";
+        if (Array.isArray(fruits)) {
+            for (let i = 0; i < fruits.length; i++) {
+                demoElem.innerHTML += fruits[i] + "<br/>";
+            }
+        } else {
+            demoElem.innerHTML += fruits + "<br/>";
+        }
+
+        // Loop through numbers with for...of loop
+        demoElem.innerHTML += "Numbers using for...of loop:<br/>";
+        for (let number of numbers) {
+            demoElem.innerHTML += number + "<br/>";
+        }
+
+        // Loop through fruits indices with for...in loop
+        demoElem.innerHTML += "Fruits using for...in loop:<br/>";
+        if (Array.isArray(fruits)) {
+            for (let index in fruits) {
+                demoElem.innerHTML += fruits[index] + "<br/>";
+            }
+        } else {
+            demoElem.innerHTML += fruits + "<br/>";
+        }
+
+        // Length of arrays
+        let fruitCount = Array.isArray(fruits) ? fruits.length : 0;
+        let numberCount = numbers.length;
+        demoElem.innerHTML += `Fruit Count: ${fruitCount}, Number Count: ${numberCount}`;
+    </script>
+</body>
+</html>
